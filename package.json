@@ -1,0 +1,41 @@
+{
+  "name": "front-exercice",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": "^18",
+    "npm": "^9"
+  },
+  "scripts": {
+    "start": "concurrently -n serv,vite \"npm run dev:serv\" \"npm run dev:front\"",
+    "dev:front": "vite",
+    "dev:serv": "node server.js",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@eslint/js": "9.7.0",
+    "antd": "^5.19.3",
+    "fastify": "^4.28.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/compat": "1.1.1",
+    "@types/node": "20.14.11",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react-swc": "^3.7.0",
+    "concurrently": "^8.2.2",
+    "eslint": "8.57.0",
+    "eslint-plugin-react": "7.34.4",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "eslint-plugin-react-refresh": "0.4.8",
+    "prettier": "^3.3.3",
+    "typescript": "5.5.3",
+    "typescript-eslint": "7.16.1",
+    "vite": "^5.3.4"
+  }
+}
